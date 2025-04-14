@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Netflix</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <span><img src="Posters/logo.svg" alt=""></span>
+            <div class="flex">
+                <!-- Language Dropdown Container -->
+                <div class="lang-container">
+                    <button id="lang">
+                        <i class="fa-solid fa-language" ></i> English <span id="arrow">&#9662;</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <span class="lang-option" data-lang="en">English</span>
+                        <span class="lang-option" data-lang="hi">हिन्दी</span>
+                        <span class="lang-option" data-lang="fr">Français</span>
+                        <span class="lang-option" data-lang="es">Español</span>
+                    </div>
+                </div>
+                <button id="sign">Sign In</button>
+            </div>
+        </nav>
+        
+        <div class="box">
+        </div>
+        <div class="hero">
+            <span id="hi1">Unlimited movies,<br>TV shows and more</span>
+            <span id="hi2">Starts at ₹149. Cancel at any time.</span>
+            <span id="hi3">Ready to watch? Enter your email to create or restart your membership.</span>
+       
+        <div class="email-container">
+            <input type="email" class="email" placeholder="Email address">
+            <button class="submit">Get Started &gt </button>
+        </div>
+        </div>
+        <div class="curve"></div>
+    </div>
+    <div class="parent">
+        <div class="p1"><div class="p11"></div></div>
+    </div>
+    <div class="main1">
+        <!-- Trending Section -->
+        <div class="trending-section">
+            <h2>Trending Now</h2>
+        </div>
+    
+        <!-- Slider Section -->
+        <div class="slider">
+            <div class="card-container">
+                <div class="card"><img src="Posters/Pushpa-2-Poster.jpg_large" alt="Pushpa 2 Movie Poster"></div>
+                <div class="card"><img src="Posters/Daku maharaj-Poster.jpg" alt="Daku Maharaj Movie Poster"></div>
+                <div class="card"><img src="Posters/Squid_Game2-poster.png" alt="Squid Game Season 2 Poster"></div>
+                <div class="card"><img src="Posters/Dhoom dham-poster.jpg" alt="Dhoom Dham Movie Poster"></div>
+                <div class="card"><img src="Posters/Lucky basker-poster.jpg" alt="Lucky Basker Movie Poster"></div>
+                <div class="card"><img src="Posters/stranger-things.jpg" alt="Stranger Things Poster"></div>
+                <div class="card"><img src="Posters/venom-poster.jpg" alt="Venom Movie Poster"></div>
+                <div class="card"><img src="Posters/wednesday-poster.jpg" alt="Wednesday Series Poster"></div>
+                <div class="card"><img src="Posters/Bhool bhulaya-poster.jpg" alt="Bhool Bhulaya Movie Poster"></div>
+                <div class="card"><img src="Posters/Black warrant-poster.jpg" alt="Black Warrant Movie Poster"></div>
+            </div>
+        </div>
+    
+        <!-- Additional Content Section -->
+        <div class="content-section">
+            <h2>More reasons to join</h2>
+            <div class="content-grid">
+                <div class="content-item">
+                    <h3>Enjoy on your TV</h3>
+                    <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                </div>
+                <div class="content-item">
+                    <h3>Download your shows to watch offline</h3>
+                    <p>Save your favourites easily and always have something to watch.</p>
+                </div>
+                <div class="content-item">
+                    <h3>Watch everywhere</h3>
+                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+                </div>
+                <div class="content-item">
+                    <h3>Create profiles for kids</h3>
+                    <p>Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <canvas id="three-canvas"></canvas>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

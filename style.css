@@ -29,19 +29,6 @@ body{
     position: absolute;
     top: 0;
 }
-/* Responsive behavior */
-@media (max-width: 1200px) {
-    .main {
-        background-size: contain; /* Adjust for medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .main {
-        background-size: cover; /* Keep it full for smaller screens */
-        height: 80vh; /* Reduce height for better fit */
-    }
-}
 nav{
     max-width: 75vw;
     display: flex;
@@ -52,11 +39,11 @@ nav{
 }
 nav img{
     color: rgb(166, 18, 18);
-    width: 170px;
+    width: 10.625em;
     height: auto;
     position: relative;
     z-index: 100;
-    padding-top:25px ;
+    padding-top:1.5625em ;
 }
 nav button{
     position: relative;
@@ -65,15 +52,15 @@ nav button{
 .lang-container {
     position: relative;
     display: inline-block;
-    padding-top: 25px;
+    padding-top: 1.5625em;
 }
 #sign{
-    height: 35px;
-    width: 75px;
+    height: 2.1875em;
+    width: 4.6875em;
     background: rgb(217, 5, 5);
     color: #f3f0f0;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25em;
     font-size: 1rem;
     cursor: pointer;
 }
@@ -82,14 +69,14 @@ nav button{
 }
 #lang{
     justify-content: space-between;
-    height: 35px;
-    width: 125px;
+    height: 2.1875em;
+    width: 7.8125em;
     border: solid 0.01px #d7cdcde1;
     color: #f3eded;
     background: transparent;
-    border-radius: 4px;
+    border-radius: 0.25em;
     font-size: 1rem;
-    margin-right: 8px;
+    margin-right: 0.5em;
     cursor: pointer;
 }
 #arrow{
@@ -101,10 +88,10 @@ nav button{
     position: absolute;
     background: rgba(22, 22, 22, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 4px;
-    top: 60px;
-    left: 20px;
-    width: 125px;
+    border-radius: 0.25em;
+    top: 3.75em;
+    left: 1.25em;
+    width: 7.8125em;
     text-align: left;
     z-index: 100;
     display: none;
@@ -113,10 +100,10 @@ nav button{
 /* Dropdown items */
 .lang-option {
     display: block;
-    padding: 8px 10px;
+    padding: 0.5em 0.625em;
     color: white;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 0.875em;
     text-align: center;
 }
 
@@ -133,24 +120,26 @@ nav button{
     transform: rotate(180deg);
 }
 
-.hero{
+.hero {
     font-family: Arial, sans-serif;
     font-weight: 600;
-    height: calc(100%-40px);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     color: white;
-    position: absolute; /* rel */
+    position: absolute;
     z-index: 10;
-    padding-bottom: 30px;
-    top: 55%;
+    width: 90%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    top: 55%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 #hi1{
-    font-size: 55px;
+    font-size: 3.4375em;
     margin-bottom: 10px;
     text-align: center;
     font-weight: 900;
@@ -177,7 +166,7 @@ nav button{
     margin-top: 20px;
     gap: 10px;
 }
-#email {
+.email-input {
     background-color: rgba(22, 22, 22, 0.7);
     color: white;
     width: 350px;
@@ -187,7 +176,8 @@ nav button{
     border-radius: 5px;
     outline: none;
 }
-.submit {
+
+.submit-btn {
     padding: 15px 25px;
     font-size: 22px;
     font-weight: bold;
@@ -198,7 +188,7 @@ nav button{
     cursor: pointer;
     transition: 0.3s;
 }
-.submit:hover{
+.submit-btn:hover{
     background-color: darkred;
 }
 .curve{
@@ -225,7 +215,7 @@ nav button{
     background: #000;
     color: white;
     align-items: center;
-    max-height: 100vh;
+    min-height: 100vh;
 }
 .main1{
     padding-top: 20px;
@@ -293,7 +283,7 @@ nav button{
 
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4,1fr);
     gap: 20px;
     height: 270px;
 }
@@ -303,8 +293,9 @@ nav button{
     padding: 20px;
     border-radius: 17px;
     text-align: left;
-    background: linear-gradient(45deg,rgb(48, 46, 46),rgb(32, 56, 116));
+    background: linear-gradient(-45deg,rgb(14, 14, 14),rgb(60, 40, 149),rgb(219, 134, 229));
     position: relative;
+    min-height: 170px;
 }
 
 .content-item h3 {
@@ -336,89 +327,258 @@ nav button{
 }
 .question-list{
     width: 80vw;
-    height: 70vh;
-    position: relative;
+    height: auto;
+    min-height: 50vh;
     margin-top: 10px;
     margin-bottom: 60px;
 }
 .questions-div{
-    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 0 auto;
 }
 .questions{
     flex: 1;
     list-style: none;
     background: #242424;
-    padding: 12px 20px;
     font-size: 24px;
     font-weight: 500;
-    font-family: 'Martel Sans', sans-serif; /* Use your Netflix font */
+    font-family: 'Martel Sans', sans-serif; 
     letter-spacing: 0.5px;
     cursor: pointer;
+    padding: 10px 15px; 
 }
 .questions::after {
     content: "+";
     float: right;
     font-size: 27px;
-    padding-right: 30px;
+    padding-right: 2em;
 }
 .questions:hover{
     background: #363636;
 }
 footer{
-    min-height: 70vh;
+    min-height: 65vh;
     background: #000;
     padding: 5vh 10vw ;
 }
 #p12{
     text-align: center;
-    font-size: 14px;
+    font-size: 0.875em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.email1{
-    background-color: rgba(22, 22, 22, 0.7);
-    color: white;
-    width: 450px;
-    padding: 15px;
-    font-size: 18px;
-    border: 0.7px solid #e7e0e0e0;
-    border-radius: 5px;
-    outline: none;   
 }
 a{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1em;
 }
 .blur-box{
     position: absolute;
-    height: 15px;
-    width: 450px;
+    height: 1em;
+    width: 30em;
     background: #2105f1;
     display: flex;
     left:35%;
     border-radius: 50%;
-    filter: blur(40px);
+    filter: blur(2.5em);
     z-index: 1;
 }
 .footer-list{
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    gap: 10px; /* spacing between items */
+    grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
+    gap: 0.625em; /* spacing between items */
     list-style: none; /* remove bullets */
-    margin: 0;
-    padding-top: 30px;
+    padding-top: 2em;
 }
 .l1{
-    margin-top: 12px;
+    margin-top: 1em;
 }
 #copyrights{
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
-    font-size: 16px;
-    margin-top: 40px;
+    font-size: 1em;
+    margin-top: 2.5em;
 }
+.foot-hover {
+    position: relative;
+  }
+  
+  .foot-hover::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; 
+    bottom: -4px;
+    left: 50%;
+    background-color: currentColor; 
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  .foot-hover:hover::after {
+    width: 100%;
+    left: 0;
+  } 
+
+  /* Responsive behavior */
+@media (max-width: 1200px) {
+    .main {
+        background-size: contain; /* Adjust for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        background-size: cover;
+        height: 80vh; /* Reduce height for better fit */
+    }
+}
+@media (max-width:650px){
+    .main{
+        background-size: cover;
+    }
+}
+/*-------------------RESPONSIVE BY MEDIA QUERIES--------------------*/
+@media (max-width: 1023px) {
+    nav img {
+        width: 8em; 
+        padding-top: 1.25em; 
+    }
+    .content-grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+}
+@media (max-width: 768px) {
+    nav img {
+        width: 5.5em;
+        padding-top: 1em;
+    }
+    .hero {
+        width: 90%;
+        padding-top: 0;
+        top: 60%;
+    }
+    #hi1, #hi2, #hi3 {
+        text-align: center;
+        width: 100%;
+        padding: 0 10px;
+      }    
+    #hi1 {
+        font-size: 1.7rem; 
+        line-height: 1.2;
+      }
+      
+      #hi2 {
+        font-size: 1.2rem;
+        padding: 10px;
+      }
+      
+      .email-container {
+        flex-direction: column;
+        width: 100%;
+      }
+      .email-input {
+        width: 85vw;
+        padding: 12px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    .questions::after{
+        padding-right: 1.5em;
+    }
+    .submit-btn {
+        padding: 12px;
+        font-size: 18px;
+    }
+      .card1 {
+        width: 170px;
+        height: 220px;
+      }
+      
+      .card-container {
+        gap: 25px;
+      }
+
+      .footer-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .blur-box {
+        width: 100%;
+        left: 0;
+        filter: blur(1.5em);
+      }
+      .slider,.question-list{
+        width: 90vw;
+      }
+      .content-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+      .content-item {
+        padding: 12px;
+      }
+      .content-item h3 {
+        font-size: 1.1rem;
+      }
+    
+      .content-item p {
+        font-size: 0.8rem;
+      }
+      .main .box {
+        height: 100%;
+    }
+    .question-list {
+        height: auto;
+        min-height: 40vh;
+    }
+    .questions {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+    }
+/*----------------------------------------------------------------------------------*/
+
+@media (max-width: 548px) {
+    nav {
+      padding: 0 15px;
+      max-width: 100%;
+    }
+    
+    nav img {
+      width: 80px;
+    }
+    
+    #lang {
+      width: auto;
+      padding: 0 10px;
+    }
+    .submit{
+        font-size: 16px;
+        top:95%;
+    }
+    .foot-hover , #copyrights{
+        font-size: 14px;
+    }
+    .card-container {
+        gap: 15px;
+      }
+      .card1 {
+        width: 150px;
+        height: 200px;
+      }
+      .questions::after{
+        padding-right: 0.7em;
+    }
+  }
+
+  /*----------------------------------------------------------------------------------*/
+
+@media (max-width: 480px) {
+    .footer-list {
+      grid-template-columns: 1fr;
+    }
+    .icon-element{
+        right: 10px;
+        bottom: 10px;
+    }
+  }
